@@ -8920,7 +8920,7 @@ GameObject:
   - component: {fileID: 1130794295}
   - component: {fileID: 1130794294}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: MainChar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
