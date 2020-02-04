@@ -9008,6 +9008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1130794297}
+  thresholdReached: 0
+  currentY: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -9215,7 +9217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1037336650
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9397,6 +9399,7 @@ MonoBehaviour:
   leftWallHang: 0
   rightWallHang: 0
   justHung: 0
+  fcScript: {fileID: 519420030}
   GgroundPointA: {fileID: 137385826}
   GgroundPointB: {fileID: 844390368}
   groundPointA: {x: 0, y: 0}
