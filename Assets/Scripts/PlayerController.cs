@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public bool justHung;
 
+    public FollowCam fcScript;
+
     // Collision Variables //
 
     // Ground check area points
@@ -146,15 +148,23 @@ public class PlayerController : MonoBehaviour
         justHung = false;
     }
 
-    // OLD COLLISION CHECK METHOD
-    /*void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.name == "Tilemap") {
-            grounded = true;
-        }
-    }
-    void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.name == "Tilemap") {
-            grounded = false;
-        }
+    /*void OnTriggerEnter2D(Collider2D collider) {
+        fcScript.thresholdReached = !fcScript.thresholdReached;
     }*/
-}
+
+    /*void OnTriggerExit2D(Collider2D collider) {
+        fcScript.thresholdReached = false;
+    }*/
+
+        // OLD COLLISION CHECK METHOD
+        /*void OnCollisionEnter2D(Collision2D collision) {
+            if (collision.gameObject.name == "Tilemap") {
+                grounded = true;
+            }
+        }
+        void OnCollisionExit2D(Collision2D collision) {
+            if (collision.gameObject.name == "Tilemap") {
+                grounded = false;
+            }
+        }*/
+    }

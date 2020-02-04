@@ -5,6 +5,8 @@ using UnityEngine;
 public class FollowCam : MonoBehaviour
 {
     public Transform target;
+    public bool thresholdReached = false;
+    public float currentY;
     // Start is called before the first frame update
     void Start() {
         
@@ -12,6 +14,11 @@ public class FollowCam : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
+        if (thresholdReached == false) {
+            transform.position = new Vector3(target.position.x, 0, transform.position.z);
+        }
+        else if (thresholdReached == true) {
+            transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+        }
     }
 }
